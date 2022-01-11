@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+               
+     <context:annotation-config/>
+     <context:component-scan base-package="com.te.assignment1"></context:component-scan>
+     
+     <bean id="sal" class="com.te.assignment2.Salary"></bean>
+     <bean id="mp" class="com.te.assignment2.MockPractice"></bean>
+     
+     
+</beans>
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="decan" class="com.te.assignment1.Deccan"></bean>
+
+<bean id="air" class="com.te.assignment1.Airport"> 
+
+<constructor-arg value="kempegowda international airport"></constructor-arg>
+<constructor-arg value="1"></constructor-arg>
+<property name="terminals" value="domestic"></property>
+<property name="f" ref="decan"></property>
+</bean>
+
+
+<bean id="bat" class="com.te.practice1.Battery"></bean>
+<bean id="lap" class="com.te.practice1.Laptop">
+<constructor-arg value="lenovo"></constructor-arg>
+<constructor-arg ref="bat"></constructor-arg>
+</bean>
+
+
+
+
+
+</beans> -->
+
+
+
+
+
+
+
