@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="tur" class="com.te.spring.TurboEngine"></bean>
+	<bean id="eng" class="com.te.spring.Engine">
+		<constructor-arg value="ferari"></constructor-arg>
+		<constructor-arg value="3000.00"></constructor-arg>
+	</bean>
+
+
+	<bean id="car" class="com.te.spring.Car">
+		<constructor-arg ref="eng"></constructor-arg>
+		<constructor-arg value="ferari"></constructor-arg>
+
+
+
+	</bean>
+	<!-- id shud be unique always -->
+
+	<bean id="enginee" class="com.te.spring1.Engine">
+		<property name="name" value="ferari"></property>
+		<property name="capacity" value="20000.99"></property>
+	</bean>
+
+	<bean id="cars" class="com.te.spring1.Car">
+		<property name="name" value="lambo"></property>
+		<property name="g" ref="enginee"></property>
+	</bean>
+
+
+	<!-- <bean class="com.te.spautowired.Laptop" autowire="byType"></bean> <bean 
+		class="com.te.spautowired.Battery"></bean> <bean class ="com.te.spautowired.Screen"></bean> -->
+
+	<!-- if u have same datatype more than once go for by name -->
+	<!-- <bean class="com.te.spautowired.Laptop" autowire="byName"></bean>
+	<bean id="b" class="com.te.spautowired.Battery"></bean>
+	<bean id="s" class="com.te.spautowired.Screen"></bean>
+	<bean id="hd1" class="com.te.spautowired.HardDisk"></bean>
+	<bean id="hd2" class="com.te.spautowired.HardDisk"></bean>
+ -->
+ 
+ 
+ 
+ <bean class="com.te.spautowired.Laptop" autowire="constructor"></bean>
+	<bean id="b" class="com.te.spautowired.Battery"></bean>
+	<bean id="s" class="com.te.spautowired.Screen"></bean>
+	<bean id="hd1" class="com.te.spautowired.HardDisk"></bean>
+	<bean id="hd2" class="com.te.spautowired.HardDisk"></bean>
+	
+
+
+
+</beans>
